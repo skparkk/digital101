@@ -38,13 +38,6 @@ q:before, q:after {
     content: '';
     content: none;
 }
-h1.mainTitle {
-	font-family: 'Nova Square', cursive;
-	font-size: 100px;
-	color: #000000;
-	margin-top: 130px;
-	margin-left: -20px;
-}
 h2 {
 	text-transform: uppercase;
 }
@@ -220,45 +213,30 @@ a:focus {
 }
 
 /*
-    And now we start to style each step separately.
-
-    I agree that this may be not the most efficient, object-oriented and
-    scalable way of styling, but most of steps have quite a custom look
-    and typography tricks here and there, so they had to be styled separately.
-
-    First is the title step with a big <h1> (no room for padding) and some
-    3D positioning along Z axis.
+  Title Card and Outline
 */
 
-#title {
-    padding: 0;
+h1.mainTitle {
+	font-family: 'Nova Square', cursive;
+	font-size: 100px;
+	color: #000000;
+	margin-top: 130px;
+	margin-left: -20px;
 }
-
-#title .try {
-    font-size: 64px;
-    position: absolute;
-    top: -0.5em;
-    left: 1.5em;
-
-    -webkit-transform: translateZ(20px);
-    -moz-transform:    translateZ(20px);
-    -ms-transform:     translateZ(20px);
-    -o-transform:      translateZ(20px);
-    transform:         translateZ(20px);
+table#dice {
+	width: 100%;
+	height: 100%;
+	font-family: 'Nova Square', cursive;
+	font-size: 40px;
+	color: #000000;
+	text-align: center;
+	margin-top: 70px;
 }
-
-#title h1 {
-    font-size: 190px;
-
-    -webkit-transform: translateZ(50px);
-    -moz-transform:    translateZ(50px);
-    -ms-transform:     translateZ(50px);
-    -o-transform:      translateZ(50px);
-    transform:         translateZ(50px);
+table#dice td {
+	transition: font-size 1s ease;
 }
-
-#title .footnote {
-    font-size: 32px;
+table#dice td:hover {
+	font-size: 80px;
 }
 
 /*
@@ -301,7 +279,16 @@ a:focus {
     ... so we define display to `inline-block` to enable transforms and
     transition duration to 0.5s ...
 */
-#title p {
+#scope h2 {
+	font-size: 190px;
+	
+	-webkit-transform: translateZ(50px);
+	-moz-transform:    translateZ(50px);
+	-ms-transform:     translateZ(50px);
+	-o-transform:      translateZ(50px);
+	transform:         translateZ(50px);
+}
+#scope p strong {
     display: inline-block;
     -webkit-transition: 0.5s;
     -moz-transition:    0.5s;
@@ -314,26 +301,15 @@ a:focus {
     ... and we want 'positioning` word to move up a bit when the step gets
     `present` class ...
 */
-#title.present p#ing strong.dos {
-    -webkit-transform: translateY(-30px);
-    -moz-transform:    translateY(-30px);
-    -ms-transform:     translateY(-30px);
-    -o-transform:      translateY(-30px);
-    transform:         translateY(-30px);
+#scope.present strong.dos {
+	transform: translateY(-20px);
+	-ms-transform: translateY(-20px); /* IE 9 */
+	-webkit-transform: translateY(-20px); /* Opera, Chrome, and Safari */
 }
-
-#title.present p#ing strong.donts {
-	-webkit-transform: scale(0.7);
-	-moz-transform:    scale(0.7);
-	-ms-transform:     scale(0.7);
-	-o-transform:      scale(0.7);
-	transform:         scale(0.7);
-	
-	-webkit-transition-delay: 0.5s;
-	-moz-transition-delay:    0.5s;
-	-ms-transition-delay:     0.5s;
-	-o-transition-delay:      0.5s;
-	transition-delay:         0.5s;
+#scope.present strong.donts {
+	transform:rotate(7deg);
+	-ms-transform:rotate(7deg); /* IE 9 */
+	-webkit-transform:rotate(7deg); /* Opera, Chrome, and Safari */
 }
 
 /*
@@ -370,70 +346,108 @@ a:focus {
     transition-delay:         0.5s;
 }
 
-#process1.present {
-	display: block;
+/* DO'S AND DON'TS */
+.dostitle {
+	font-size: 130px;
 }
-#process2.present {
-	display: block;
-	margin-top: 700px;
-	margin-left: 145px;
-}
-#process3.present {
-	display: block;
-	margin-top: 700px;
-	margin-left: 960px;
-}
-#process4.present {
-	display: block;
-	margin-top: -240px;
-	margin-left: 980px;
-}
-#process5.present {
-	display: block;
-	margin-top: -400px;
-	margin-left: 400px;
+.dontstitle {
+	font-size: 130px;
 }
 
-#process1.future, #process1.past{
-	display: none;
-}
-#process2.future, #process2.past {
-	display: none;
-}
-#process3.future, #process3.past {
-	display: none;
-}
-#process4.future, #process4.past {
-	display: none;
-}
-#process5.future, #process5.past {
-	display: none;
+/* PEOPLE */
+
+#people h2 {
+	font-size: 190px;
+	
+	-webkit-transform: translateZ(50px);
+	-moz-transform:    translateZ(50px);
+	-ms-transform:     translateZ(50px);
+	-o-transform:      translateZ(50px);
+	transform:         translateZ(50px);
 }
 
-.requirements {
-	transform:rotate(200deg);
-	-ms-transform:rotate(200deg); /* IE 9 */
-	-webkit-transform:rotate(200deg); /* Opera, Chrome, and Safari */
+table#ppl {
+	width: 900px;
+	font-size: 40px;
+	color: #000000;
+	text-align: center;
+	text-transform: uppercase;
 }
-.cbrief {
-	transform:rotate(130deg);
-	-ms-transform:rotate(130deg); /* IE 9 */
-	-webkit-transform:rotate(130deg); /* Opera, Chrome, and Safari */
+#ppl td.ppltitle {
+	font-weight: bold;
+	font-size: 60px;
 }
-.mocks {
-	transform:rotate(50deg);
-	-ms-transform:rotate(50deg); /* IE 9 */
-	-webkit-transform:rotate(50deg); /* Opera, Chrome, and Safari */
+#ppl td.ppltitle.des {
+	font-family: 'Permanent Marker', cursive;
+	
 }
-.dev {
-	transform:rotate(315deg);
-	-ms-transform:rotate(315deg); /* IE 9 */
-	-webkit-transform:rotate(315deg); /* Opera, Chrome, and Safari */
+#ppl td.ppltitle.dev {
+	font-family: 'Nova Square', cursive;
 }
-.testing {
-	transform:rotate(250deg);
-	-ms-transform:rotate(250deg); /* IE 9 */
-	-webkit-transform:rotate(250deg); /* Opera, Chrome, and Safari */
+
+/* PROCESS */
+#process h2 {
+	font-size: 190px;
+	
+	-webkit-transform: translateZ(50px);
+	-moz-transform:    translateZ(50px);
+	-ms-transform:     translateZ(50px);
+	-o-transform:      translateZ(50px);
+	transform:         translateZ(50px);
+}
+
+div#processimg img {
+    -webkit-animation: rotatedev 40s linear 0s infinite; /* Chrome, Safari, Opera */
+    animation: rotatedev 40s linear 0s infinite;
+}
+div#processimg img:hover {
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rotatedev {
+    from {-webkit-transform: rotate(360deg);}
+    to {-webkit-transform: rotate(0deg);}
+}
+/* Standard syntax */
+@keyframes rotatedev {
+    from {transform: rotate(360deg);}
+    to {transform: rotate(0deg);}
+}
+
+/* TOOLS */
+#tools h2 {
+	font-size: 190px;
+	
+	-webkit-transform: translateZ(50px);
+	-moz-transform:    translateZ(50px);
+	-ms-transform:     translateZ(50px);
+	-o-transform:      translateZ(50px);
+	transform:         translateZ(50px);
+}
+
+/* EXAMPLE */
+#example h2 {
+	font-size: 190px;
+	
+	-webkit-transform: translateZ(50px);
+	-moz-transform:    translateZ(50px);
+	-ms-transform:     translateZ(50px);
+	-o-transform:      translateZ(50px);
+	transform:         translateZ(50px);
+}
+
+#questions {
+	font-size: 500px;
+	font-weight: bold;
+	margin-left: 300px;
+	
+	-webkit-transform: translateZ(1000px);
+	-moz-transform:    translateZ(1000px);
+	-ms-transform:     translateZ(1000px);
+	-o-transform:      translateZ(1000px);
+	transform:         translateZ(1000px);
 }
 
 /*

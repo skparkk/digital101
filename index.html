@@ -7,6 +7,7 @@
 		<title>CreativeWorks Digital 101</title>
 		
 		<link href='http://fonts.googleapis.com/css?family=Nova+Square' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
 		<link href="css/styles.css" rel="stylesheet" />
 		
 		<link rel="shortcut icon" href="favicon.png" />
@@ -25,35 +26,39 @@
 					Digital 101
 				</h1>
 			</div>
-			<div class="step slide" data-x="0" data-y="-1500">
-				<p>
-					<ul>
-						<li>Scope</li>
-						<li>People</li>
-						<li>Process</li>
-						<li>Tools</li>
-						<li>Example</li>
-					</ul>
-				</p>
+			<div id="outline" class="step slide" data-x="0" data-y="-1500">
+				<table id="dice">
+					<tr>
+						<td id="dscope">Scope</td>
+						<td id="dpeople">People</td>
+					</tr>
+					<tr>
+						<td id="dprocess" colspan="2">Process</td>
+					</tr>
+					<tr>	
+						<td id="dtools">Tools</td>
+						<td id="dexample">Example</td>
+					</tr>
+				</table>
 			</div>
 			<div id="scope" class="step" data-x="0" data-y="0" data-scale="6">
 				<h2>Scope</h2>
-				<p id="ing">What we <strong class="dos">do</strong> and <strong class="donts">don't</strong>.</p>	
+				<p id="ing" style="margin-top: -60px;">What we <strong class="dos">do</strong> and <strong class="donts">don't</strong>.</p>	
 			</div>
-			<div id="dos" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="4">
-				<p class="dos">Do's</p>
+			<div id="tinydo" class="step" data-x="2825" data-y="-300" data-z="-3000" data-rotate="300" data-scale="1">
+			    <p class="dostitle">Do's</p>
 			</div>
-			<div id="donts" class="step" data-x="3500" data-y="2100" data-z="-3000" data-rotate="180" data-scale="4">
-				<p class="donts">Don'ts</p>
+			<div id="tinydont" class="step" data-x="2825" data-y="-300" data-z="-6000" data-rotate="300" data-scale="1">
+			    <p class="dostitle">Dont's</p>
 			</div>
-			<div id="people" class="step" data-x="-50" data-y="800" data-z="500" data-scale="6">
+			<div id="people" class="step" data-x="140" data-y="1600" data-z="500" data-scale="6">
 				<h2>People</h2>
 			</div>
-			<div id="desdev" class="step" data-x="-5000" data-y="3000" data-rotate="270" data-scale="6">
-				<table>
+			<div id="desdev" class="step" data-x="5000" data-y="1000" data-rotate="270" data-scale="6">
+				<table id="ppl">
 					<tr>
-						<td>Designers</td>
-						<td>Developers</td>
+						<td class="ppltitle des">Designers</td>
+						<td class="ppltitle dev">Developers</td>
 					</tr>
 					<tr>
 						<td>Genta</td>
@@ -68,30 +73,27 @@
 						<td></td>
 				</table>
 			</div>
-			<div id="process" class="step" data-x="120" data-y="1600" data-z="1000" data-scale="6">
+			<div id="process" class="step" data-x="320" data-y="3000" data-z="1000" data-scale="6">
 				<h2>Process</h2>
 			</div>
-			<div id="process1" class="step" data-x="10000" data-y="1500" data-scale="6">
-				<p class="requirements"><img src="img/process2.png"></p>
+			<div id="processimg" class="step" data-x="10500" data-y="800" data-scale="6">
+				<img src="img/process2.png" />
 			</div>
-			<div id ="process2" class="step" data-x="10000" data-y="1500" data-scale="6">
-				<p class="cbrief"><img src="img/process2.png"></p>
-			</div>
-			<div id ="process3" class="step" data-x="10000" data-y="1500" data-scale="6">
-				<p class="mocks"><img src="img/process2.png"></p>
-			</div>
-			<div id ="process4" class="step" data-x="10000" data-y="1500" data-scale="6">
-				<p class="dev"><img src="img/process2.png"></p>
-			</div>
-			<div id ="process5" class="step" data-x="10000" data-y="1500" data-scale="6">
-				<p class="testing"><img src="img/process2.png"></p>
-			</div>
-			
-			<div id="tools" class="step" data-x="300" data-y="2400" data-z="1500" data-scale="6">
+			<div id="tools" class="step" data-x="600" data-y="4400" data-z="1500" data-scale="6">
 				<h2>Tools</h2>
 			</div>
-			<div id="example" class="step" data-x="630" data-y="3200" data-z="2500" data-scale="6">
+			<div id="toolicons" class="step" data-x="3500" data-y="0" data-z="-300" data-rotate="420" data-scale="4">
+				<p>
+					<a href="http://getbootstrap.com" style="background: none;" target="_blank">
+						<img src="img/twb.png" style="width: 150px; height: 150px;" />
+					</a>
+				</p>
+			</div>
+			<div id="example" class="step" data-x="950" data-y="5700" data-z="2500" data-scale="6">
 				<h2>Example</h2>
+			</div>
+			<div id="overview" class="step" data-x="4500" data-y="2500" data-scale="15">
+				<p id="questions">?</p>
 			</div>
 		</div> <!-- end #impress -->
 		
